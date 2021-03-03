@@ -1,0 +1,7 @@
+22:46:55 **** Clean-only build of configuration Debug for project UART_GPIO ****
+make clean 
+rm -rf  ./src/UART_GPIO.o  ./src/UART_GPIO.d  UART_GPIO.elf.size  UART_GPIO.elf
+' '
+
+22:46:55 Build Finished (took 338ms)
+

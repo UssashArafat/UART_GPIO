@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;UART_GPIO_ButtonSwitchLed/src/UART_GPIO_ButtonSwitchLed&apos; to &apos;UART_GPIO_ButtonSwitchLed.c&apos;" description="Rename resource &apos;UART_GPIO_ButtonSwitchLed&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/UART_GPIO_ButtonSwitchLed" name="UART_GPIO_ButtonSwitchLed.c" stamp="1614750788570" updateReferences="true"/>
+</session>

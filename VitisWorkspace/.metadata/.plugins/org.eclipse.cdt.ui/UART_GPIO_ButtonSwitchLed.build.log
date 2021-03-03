@@ -1,0 +1,7 @@
+22:46:55 **** Clean-only build of configuration Debug for project UART_GPIO_ButtonSwitchLed ****
+make clean 
+rm -rf  ./src/UART_GPIO_ButtonSwitchLed.o  ./src/UART_GPIO_ButtonSwitchLed.d  UART_GPIO_ButtonSwitchLed.elf.size  UART_GPIO_ButtonSwitchLed.elf
+' '
+
+22:46:56 Build Finished (took 405ms)
+

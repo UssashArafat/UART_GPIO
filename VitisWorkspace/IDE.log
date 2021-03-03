@@ -1,0 +1,1827 @@
+18:41:01 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\Projects\SOC_Projects\UART_GPIO_Zedboard\VitisWorkspace\temp_xsdb_launch_script.tcl
+18:41:01 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\Projects\SOC_Projects\UART_GPIO_Zedboard\VitisWorkspace\temp_xsdb_launch_script.tcl
+18:41:01 INFO  : Registering command handlers for Vitis TCF services
+18:41:06 INFO  : Platform repository initialization has completed.
+18:41:06 INFO  : XSCT server has started successfully.
+18:41:06 INFO  : XSCT server has started successfully.
+18:41:06 INFO  : plnx-install-location is set to ''
+18:41:06 INFO  : Successfully done setting XSCT server connection channel  
+18:41:06 INFO  : Successfully done setting XSCT server connection channel  
+18:41:06 INFO  : Successfully done setting workspace for the tool. 
+18:41:06 INFO  : Successfully done setting workspace for the tool. 
+18:41:11 INFO  : Successfully done query RDI_DATADIR 
+18:42:17 WARN  : An unexpected exception occurred in the module 'platform project logging'
+18:42:18 INFO  : Platform 'System_wrapper' is added to custom repositories.
+18:42:30 INFO  : Platform 'System_wrapper' is added to custom repositories.
+19:56:31 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO'...
+19:58:39 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO'...
+19:59:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:59:04 INFO  : Jtag cable 'Digilent Zed 210248B02087' is selected.
+19:59:04 INFO  : 'jtag frequency' command is executed.
+19:59:04 INFO  : Context for 'APU' is selected.
+19:59:04 INFO  : System reset is completed.
+19:59:07 INFO  : 'after 3000' command is executed.
+19:59:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}' command is executed.
+19:59:10 INFO  : Device configured successfully with "D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/_ide/bitstream/System_wrapper.bit"
+19:59:10 INFO  : Context for 'APU' is selected.
+19:59:10 INFO  : Hardware design and registers information is loaded from 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa'.
+19:59:10 INFO  : 'configparams force-mem-access 1' command is executed.
+19:59:10 INFO  : Context for 'APU' is selected.
+19:59:10 INFO  : Sourcing of 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/_ide/psinit/ps7_init.tcl' is done.
+19:59:10 INFO  : 'ps7_init' command is executed.
+19:59:10 INFO  : 'ps7_post_config' command is executed.
+19:59:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:59:10 INFO  : The application 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/Debug/UART_GPIO.elf' is downloaded to processor 'ps7_cortexa9_0'.
+19:59:10 INFO  : 'configparams force-mem-access 0' command is executed.
+19:59:10 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}
+fpga -file D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/_ide/bitstream/System_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/Debug/UART_GPIO.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+19:59:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+19:59:11 INFO  : 'con' command is executed.
+19:59:11 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+19:59:11 INFO  : Disconnected from the channel tcfchan#3.
+20:00:17 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO'...
+20:00:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:00:26 INFO  : Jtag cable 'Digilent Zed 210248B02087' is selected.
+20:00:26 INFO  : 'jtag frequency' command is executed.
+20:00:26 INFO  : Context for 'APU' is selected.
+20:00:26 INFO  : System reset is completed.
+20:00:29 INFO  : 'after 3000' command is executed.
+20:00:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}' command is executed.
+20:00:31 INFO  : Device configured successfully with "D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/_ide/bitstream/System_wrapper.bit"
+20:00:31 INFO  : Context for 'APU' is selected.
+20:00:31 INFO  : Hardware design and registers information is loaded from 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa'.
+20:00:31 INFO  : 'configparams force-mem-access 1' command is executed.
+20:00:31 INFO  : Context for 'APU' is selected.
+20:00:31 INFO  : Sourcing of 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/_ide/psinit/ps7_init.tcl' is done.
+20:00:32 INFO  : 'ps7_init' command is executed.
+20:00:32 INFO  : 'ps7_post_config' command is executed.
+20:00:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:00:32 INFO  : The application 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/Debug/UART_GPIO.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:00:32 INFO  : 'configparams force-mem-access 0' command is executed.
+20:00:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}
+fpga -file D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/_ide/bitstream/System_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/Debug/UART_GPIO.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:00:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:00:32 INFO  : 'con' command is executed.
+20:00:32 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:00:32 INFO  : Disconnected from the channel tcfchan#4.
+20:02:13 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO'...
+20:02:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:02:25 INFO  : Jtag cable 'Digilent Zed 210248B02087' is selected.
+20:02:25 INFO  : 'jtag frequency' command is executed.
+20:02:25 INFO  : Context for 'APU' is selected.
+20:02:25 INFO  : System reset is completed.
+20:02:28 INFO  : 'after 3000' command is executed.
+20:02:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}' command is executed.
+20:02:31 INFO  : Device configured successfully with "D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/_ide/bitstream/System_wrapper.bit"
+20:02:31 INFO  : Context for 'APU' is selected.
+20:02:31 INFO  : Hardware design and registers information is loaded from 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa'.
+20:02:31 INFO  : 'configparams force-mem-access 1' command is executed.
+20:02:31 INFO  : Context for 'APU' is selected.
+20:02:31 INFO  : Sourcing of 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/_ide/psinit/ps7_init.tcl' is done.
+20:02:31 INFO  : 'ps7_init' command is executed.
+20:02:31 INFO  : 'ps7_post_config' command is executed.
+20:02:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:02:31 INFO  : The application 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/Debug/UART_GPIO.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:02:31 INFO  : 'configparams force-mem-access 0' command is executed.
+20:02:31 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}
+fpga -file D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/_ide/bitstream/System_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/Debug/UART_GPIO.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:02:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:02:31 INFO  : 'con' command is executed.
+20:02:31 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:02:31 INFO  : Disconnected from the channel tcfchan#5.
+20:03:47 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO'...
+20:03:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:03:55 INFO  : Jtag cable 'Digilent Zed 210248B02087' is selected.
+20:03:55 INFO  : 'jtag frequency' command is executed.
+20:03:55 INFO  : Context for 'APU' is selected.
+20:03:55 INFO  : System reset is completed.
+20:03:58 INFO  : 'after 3000' command is executed.
+20:03:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}' command is executed.
+20:04:00 INFO  : Device configured successfully with "D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/_ide/bitstream/System_wrapper.bit"
+20:04:00 INFO  : Context for 'APU' is selected.
+20:04:00 INFO  : Hardware design and registers information is loaded from 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa'.
+20:04:00 INFO  : 'configparams force-mem-access 1' command is executed.
+20:04:00 INFO  : Context for 'APU' is selected.
+20:04:00 INFO  : Sourcing of 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/_ide/psinit/ps7_init.tcl' is done.
+20:04:01 INFO  : 'ps7_init' command is executed.
+20:04:01 INFO  : 'ps7_post_config' command is executed.
+20:04:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:04:01 INFO  : The application 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/Debug/UART_GPIO.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:04:01 INFO  : 'configparams force-mem-access 0' command is executed.
+20:04:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}
+fpga -file D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/_ide/bitstream/System_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/Debug/UART_GPIO.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:04:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:04:01 INFO  : 'con' command is executed.
+20:04:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:04:01 INFO  : Disconnected from the channel tcfchan#6.
+20:04:30 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO'...
+20:04:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:04:36 INFO  : Jtag cable 'Digilent Zed 210248B02087' is selected.
+20:04:36 INFO  : 'jtag frequency' command is executed.
+20:04:36 INFO  : Context for 'APU' is selected.
+20:04:36 INFO  : System reset is completed.
+20:04:39 INFO  : 'after 3000' command is executed.
+20:04:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}' command is executed.
+20:04:41 INFO  : Device configured successfully with "D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/_ide/bitstream/System_wrapper.bit"
+20:04:41 INFO  : Context for 'APU' is selected.
+20:04:41 INFO  : Hardware design and registers information is loaded from 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa'.
+20:04:41 INFO  : 'configparams force-mem-access 1' command is executed.
+20:04:41 INFO  : Context for 'APU' is selected.
+20:04:41 INFO  : Sourcing of 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/_ide/psinit/ps7_init.tcl' is done.
+20:04:42 INFO  : 'ps7_init' command is executed.
+20:04:42 INFO  : 'ps7_post_config' command is executed.
+20:04:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:04:42 INFO  : The application 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/Debug/UART_GPIO.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:04:42 INFO  : 'configparams force-mem-access 0' command is executed.
+20:04:42 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}
+fpga -file D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/_ide/bitstream/System_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/Debug/UART_GPIO.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:04:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:04:42 INFO  : 'con' command is executed.
+20:04:42 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:04:42 INFO  : Disconnected from the channel tcfchan#7.
+20:10:06 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO'...
+20:10:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:10:16 INFO  : Jtag cable 'Digilent Zed 210248B02087' is selected.
+20:10:16 INFO  : 'jtag frequency' command is executed.
+20:10:16 INFO  : Context for 'APU' is selected.
+20:10:16 INFO  : System reset is completed.
+20:10:19 INFO  : 'after 3000' command is executed.
+20:10:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}' command is executed.
+20:10:22 INFO  : Device configured successfully with "D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/_ide/bitstream/System_wrapper.bit"
+20:10:22 INFO  : Context for 'APU' is selected.
+20:10:22 INFO  : Hardware design and registers information is loaded from 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa'.
+20:10:22 INFO  : 'configparams force-mem-access 1' command is executed.
+20:10:22 INFO  : Context for 'APU' is selected.
+20:10:22 INFO  : Sourcing of 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/_ide/psinit/ps7_init.tcl' is done.
+20:10:22 INFO  : 'ps7_init' command is executed.
+20:10:22 INFO  : 'ps7_post_config' command is executed.
+20:10:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:10:23 INFO  : The application 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/Debug/UART_GPIO.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:10:23 INFO  : 'configparams force-mem-access 0' command is executed.
+20:10:23 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}
+fpga -file D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/_ide/bitstream/System_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/Debug/UART_GPIO.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:10:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:10:23 INFO  : 'con' command is executed.
+20:10:23 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:10:23 INFO  : Disconnected from the channel tcfchan#8.
+20:51:22 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO'...
+21:06:29 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\Projects\SOC_Projects\UART_GPIO_Zedboard\VitisWorkspace\temp_xsdb_launch_script.tcl
+21:06:34 INFO  : XSCT server has started successfully.
+21:06:34 INFO  : plnx-install-location is set to ''
+21:06:34 INFO  : Successfully done setting XSCT server connection channel  
+21:06:34 INFO  : Successfully done setting workspace for the tool. 
+21:06:38 INFO  : Platform repository initialization has completed.
+21:06:39 INFO  : Registering command handlers for Vitis TCF services
+21:06:40 INFO  : Successfully done query RDI_DATADIR 
+21:12:06 INFO  : Hardware specification for platform project 'System_wrapper' is updated.
+21:12:38 INFO  : Result from executing command 'getProjects': System_wrapper
+21:12:38 INFO  : Result from executing command 'getPlatforms': System_wrapper|D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/System_wrapper.xpfm
+21:13:50 INFO  : Hardware specification for platform project 'System_wrapper' is updated.
+21:14:12 INFO  : Hardware specification for platform project 'System_wrapper' is updated.
+21:14:21 INFO  : Result from executing command 'getProjects': System_wrapper
+21:14:21 INFO  : Result from executing command 'getPlatforms': System_wrapper|D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/System_wrapper.xpfm
+21:22:41 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO'...
+21:46:47 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO'...
+21:48:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:48:28 INFO  : Jtag cable 'Digilent Zed 210248B02087' is selected.
+21:48:28 INFO  : 'jtag frequency' command is executed.
+21:48:28 INFO  : Context for 'APU' is selected.
+21:48:28 INFO  : System reset is completed.
+21:48:31 INFO  : 'after 3000' command is executed.
+21:48:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}' command is executed.
+21:48:33 INFO  : Device configured successfully with "D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/_ide/bitstream/System_wrapper.bit"
+21:48:33 INFO  : Context for 'APU' is selected.
+21:48:33 INFO  : Hardware design and registers information is loaded from 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa'.
+21:48:33 INFO  : 'configparams force-mem-access 1' command is executed.
+21:48:33 INFO  : Context for 'APU' is selected.
+21:48:33 INFO  : Sourcing of 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/_ide/psinit/ps7_init.tcl' is done.
+21:48:34 INFO  : 'ps7_init' command is executed.
+21:48:34 INFO  : 'ps7_post_config' command is executed.
+21:48:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:48:34 INFO  : The application 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/Debug/UART_GPIO.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:48:34 INFO  : 'configparams force-mem-access 0' command is executed.
+21:48:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}
+fpga -file D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/_ide/bitstream/System_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/Debug/UART_GPIO.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:48:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:48:34 INFO  : 'con' command is executed.
+21:48:34 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:48:34 INFO  : Disconnected from the channel tcfchan#5.
+21:49:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:49:10 INFO  : Jtag cable 'Digilent Zed 210248B02087' is selected.
+21:49:10 INFO  : 'jtag frequency' command is executed.
+21:49:10 INFO  : Context for 'APU' is selected.
+21:49:10 INFO  : System reset is completed.
+21:49:13 INFO  : 'after 3000' command is executed.
+21:49:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}' command is executed.
+21:49:15 INFO  : Device configured successfully with "D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/_ide/bitstream/System_wrapper.bit"
+21:49:15 INFO  : Context for 'APU' is selected.
+21:49:15 INFO  : Hardware design and registers information is loaded from 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa'.
+21:49:15 INFO  : 'configparams force-mem-access 1' command is executed.
+21:49:15 INFO  : Context for 'APU' is selected.
+21:49:15 INFO  : Sourcing of 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/_ide/psinit/ps7_init.tcl' is done.
+21:49:16 INFO  : 'ps7_init' command is executed.
+21:49:16 INFO  : 'ps7_post_config' command is executed.
+21:49:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:49:16 INFO  : The application 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/Debug/UART_GPIO.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:49:16 INFO  : 'configparams force-mem-access 0' command is executed.
+21:49:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}
+fpga -file D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/_ide/bitstream/System_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO/Debug/UART_GPIO.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:49:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:49:16 INFO  : 'con' command is executed.
+21:49:16 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:49:16 INFO  : Disconnected from the channel tcfchan#6.
+21:52:08 INFO  : Result from executing command 'getProjects': System_wrapper;System_wrapper_1
+21:52:08 INFO  : Result from executing command 'getPlatforms': System_wrapper|D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/System_wrapper.xpfm
+21:52:08 INFO  : Platform 'System_wrapper_1' is added to custom repositories.
+21:52:18 INFO  : Platform 'System_wrapper_1' is added to custom repositories.
+21:52:27 ERROR : An unexpected exception occurred in the module 'reading platform'
+21:53:51 INFO  : Result from executing command 'getProjects': System_wrapper_1
+21:53:51 INFO  : Result from executing command 'getPlatforms': System_wrapper_1|D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper_1/export/System_wrapper_1/System_wrapper_1.xpfm;System_wrapper|D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/System_wrapper.xpfm
+21:53:51 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_ButtonSwitchLed'...
+21:54:33 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_ButtonSwitchLed'...
+21:54:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:54:44 INFO  : Jtag cable 'Digilent Zed 210248B02087' is selected.
+21:54:44 INFO  : 'jtag frequency' command is executed.
+21:54:44 INFO  : Context for 'APU' is selected.
+21:54:44 INFO  : System reset is completed.
+21:54:47 INFO  : 'after 3000' command is executed.
+21:54:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}' command is executed.
+21:54:50 INFO  : Device configured successfully with "D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_ButtonSwitchLed/_ide/bitstream/System_wrapper.bit"
+21:54:50 INFO  : Context for 'APU' is selected.
+21:54:50 INFO  : Hardware design and registers information is loaded from 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper_1/export/System_wrapper_1/hw/System_wrapper.xsa'.
+21:54:50 INFO  : 'configparams force-mem-access 1' command is executed.
+21:54:50 INFO  : Context for 'APU' is selected.
+21:54:50 INFO  : Sourcing of 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_ButtonSwitchLed/_ide/psinit/ps7_init.tcl' is done.
+21:54:50 INFO  : 'ps7_init' command is executed.
+21:54:50 INFO  : 'ps7_post_config' command is executed.
+21:54:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:54:51 INFO  : The application 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_ButtonSwitchLed/Debug/UART_GPIO_ButtonSwitchLed.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:54:51 INFO  : 'configparams force-mem-access 0' command is executed.
+21:54:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}
+fpga -file D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_ButtonSwitchLed/_ide/bitstream/System_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper_1/export/System_wrapper_1/hw/System_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_ButtonSwitchLed/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_ButtonSwitchLed/Debug/UART_GPIO_ButtonSwitchLed.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:54:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:54:51 INFO  : 'con' command is executed.
+21:54:51 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:54:51 INFO  : Disconnected from the channel tcfchan#9.
+22:09:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:09:01 INFO  : Jtag cable 'Digilent Zed 210248B02087' is selected.
+22:09:01 INFO  : 'jtag frequency' command is executed.
+22:09:01 INFO  : Context for 'APU' is selected.
+22:09:01 INFO  : System reset is completed.
+22:09:04 INFO  : 'after 3000' command is executed.
+22:09:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}' command is executed.
+22:09:06 INFO  : Device configured successfully with "D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_ButtonSwitchLed/_ide/bitstream/System_wrapper.bit"
+22:09:06 INFO  : Context for 'APU' is selected.
+22:09:06 INFO  : Hardware design and registers information is loaded from 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper_1/export/System_wrapper_1/hw/System_wrapper.xsa'.
+22:09:06 INFO  : 'configparams force-mem-access 1' command is executed.
+22:09:06 INFO  : Context for 'APU' is selected.
+22:09:06 INFO  : Sourcing of 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_ButtonSwitchLed/_ide/psinit/ps7_init.tcl' is done.
+22:09:07 INFO  : 'ps7_init' command is executed.
+22:09:07 INFO  : 'ps7_post_config' command is executed.
+22:09:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:09:07 INFO  : The application 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_ButtonSwitchLed/Debug/UART_GPIO_ButtonSwitchLed.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:09:07 INFO  : 'configparams force-mem-access 0' command is executed.
+22:09:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}
+fpga -file D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_ButtonSwitchLed/_ide/bitstream/System_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper_1/export/System_wrapper_1/hw/System_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_ButtonSwitchLed/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_ButtonSwitchLed/Debug/UART_GPIO_ButtonSwitchLed.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:09:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:09:07 INFO  : 'con' command is executed.
+22:09:07 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:09:07 INFO  : Disconnected from the channel tcfchan#10.
+22:10:45 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_ButtonSwitchLed'...
+22:11:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:11:08 INFO  : Jtag cable 'Digilent Zed 210248B02087' is selected.
+22:11:08 INFO  : 'jtag frequency' command is executed.
+22:11:08 INFO  : Context for 'APU' is selected.
+22:11:08 INFO  : System reset is completed.
+22:11:11 INFO  : 'after 3000' command is executed.
+22:11:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}' command is executed.
+22:11:14 INFO  : Device configured successfully with "D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_ButtonSwitchLed/_ide/bitstream/System_wrapper.bit"
+22:11:14 INFO  : Context for 'APU' is selected.
+22:11:14 INFO  : Hardware design and registers information is loaded from 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper_1/export/System_wrapper_1/hw/System_wrapper.xsa'.
+22:11:14 INFO  : 'configparams force-mem-access 1' command is executed.
+22:11:14 INFO  : Context for 'APU' is selected.
+22:11:14 INFO  : Sourcing of 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_ButtonSwitchLed/_ide/psinit/ps7_init.tcl' is done.
+22:11:14 INFO  : 'ps7_init' command is executed.
+22:11:14 INFO  : 'ps7_post_config' command is executed.
+22:11:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:11:14 INFO  : The application 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_ButtonSwitchLed/Debug/UART_GPIO_ButtonSwitchLed.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:11:14 INFO  : 'configparams force-mem-access 0' command is executed.
+22:11:14 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}
+fpga -file D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_ButtonSwitchLed/_ide/bitstream/System_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper_1/export/System_wrapper_1/hw/System_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_ButtonSwitchLed/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_ButtonSwitchLed/Debug/UART_GPIO_ButtonSwitchLed.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:11:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:11:15 INFO  : 'con' command is executed.
+22:11:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:11:15 INFO  : Disconnected from the channel tcfchan#11.
+22:46:18 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\Projects\SOC_Projects\UART_GPIO_Zedboard\VitisWorkspace\temp_xsdb_launch_script.tcl
+22:46:21 INFO  : XSCT server has started successfully.
+22:46:21 INFO  : plnx-install-location is set to ''
+22:46:21 INFO  : Successfully done setting XSCT server connection channel  
+22:46:21 INFO  : Successfully done setting workspace for the tool. 
+22:46:25 INFO  : Platform repository initialization has completed.
+22:46:25 INFO  : Successfully done query RDI_DATADIR 
+22:46:25 INFO  : Registering command handlers for Vitis TCF services
+22:48:47 INFO  : Result from executing command 'getProjects': System_wrapper
+22:48:47 INFO  : Result from executing command 'getPlatforms': System_wrapper_1|D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper_1/export/System_wrapper_1/System_wrapper_1.xpfm;System_wrapper|D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/System_wrapper.xpfm
+22:48:47 WARN  : An unexpected exception occurred in the module 'platform project logging'
+22:48:48 INFO  : Platform 'System_wrapper' is added to custom repositories.
+22:48:57 INFO  : Platform 'System_wrapper' is added to custom repositories.
+22:53:33 INFO  : Result from executing command 'getProjects': System_wrapper
+22:53:33 INFO  : Result from executing command 'getPlatforms': System_wrapper|D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/System_wrapper.xpfm
+22:53:33 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+22:54:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:54:23 INFO  : Jtag cable 'Digilent Zed 210248B02087' is selected.
+22:54:23 INFO  : 'jtag frequency' command is executed.
+22:54:23 INFO  : Context for 'APU' is selected.
+22:54:23 INFO  : System reset is completed.
+22:54:26 INFO  : 'after 3000' command is executed.
+22:54:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}' command is executed.
+22:54:28 INFO  : Device configured successfully with "D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit"
+22:54:28 INFO  : Context for 'APU' is selected.
+22:54:28 INFO  : Hardware design and registers information is loaded from 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa'.
+22:54:28 INFO  : 'configparams force-mem-access 1' command is executed.
+22:54:28 INFO  : Context for 'APU' is selected.
+22:54:28 INFO  : Sourcing of 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl' is done.
+22:54:29 INFO  : 'ps7_init' command is executed.
+22:54:29 INFO  : 'ps7_post_config' command is executed.
+22:54:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:54:29 INFO  : The application 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:54:29 INFO  : 'configparams force-mem-access 0' command is executed.
+22:54:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}
+fpga -file D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:54:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:54:29 INFO  : 'con' command is executed.
+22:54:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:54:29 INFO  : Disconnected from the channel tcfchan#3.
+23:21:29 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+23:22:11 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+23:22:44 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+23:24:29 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+23:24:42 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+23:24:53 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+23:26:15 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+23:26:41 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+23:28:01 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+23:28:12 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+23:28:24 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+23:30:55 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+23:33:12 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+23:47:55 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+23:49:09 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+00:51:38 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+00:51:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:51:49 INFO  : Jtag cable 'Digilent Zed 210248B02087' is selected.
+00:51:49 INFO  : 'jtag frequency' command is executed.
+00:51:49 INFO  : Context for 'APU' is selected.
+00:51:49 INFO  : System reset is completed.
+00:51:52 INFO  : 'after 3000' command is executed.
+00:51:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}' command is executed.
+00:51:55 INFO  : Device configured successfully with "D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit"
+00:51:55 INFO  : Context for 'APU' is selected.
+00:51:55 INFO  : Hardware design and registers information is loaded from 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa'.
+00:51:55 INFO  : 'configparams force-mem-access 1' command is executed.
+00:51:55 INFO  : Context for 'APU' is selected.
+00:51:55 INFO  : Sourcing of 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl' is done.
+00:51:55 INFO  : 'ps7_init' command is executed.
+00:51:55 INFO  : 'ps7_post_config' command is executed.
+00:51:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:51:55 INFO  : The application 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:51:55 INFO  : 'configparams force-mem-access 0' command is executed.
+00:51:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}
+fpga -file D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:51:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:51:55 INFO  : 'con' command is executed.
+00:51:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+00:51:55 INFO  : Disconnected from the channel tcfchan#4.
+00:54:13 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+00:55:24 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+00:55:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:55:33 INFO  : Jtag cable 'Digilent Zed 210248B02087' is selected.
+00:55:33 INFO  : 'jtag frequency' command is executed.
+00:55:33 INFO  : Context for 'APU' is selected.
+00:55:34 INFO  : System reset is completed.
+00:55:37 INFO  : 'after 3000' command is executed.
+00:55:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}' command is executed.
+00:55:39 INFO  : Device configured successfully with "D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit"
+00:55:39 INFO  : Context for 'APU' is selected.
+00:55:39 INFO  : Hardware design and registers information is loaded from 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa'.
+00:55:39 INFO  : 'configparams force-mem-access 1' command is executed.
+00:55:39 INFO  : Context for 'APU' is selected.
+00:55:39 INFO  : Sourcing of 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl' is done.
+00:55:39 INFO  : 'ps7_init' command is executed.
+00:55:39 INFO  : 'ps7_post_config' command is executed.
+00:55:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:55:40 INFO  : The application 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:55:40 INFO  : 'configparams force-mem-access 0' command is executed.
+00:55:40 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}
+fpga -file D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:55:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:55:40 INFO  : 'con' command is executed.
+00:55:40 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+00:55:40 INFO  : Disconnected from the channel tcfchan#5.
+00:56:41 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+00:56:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:56:49 INFO  : Jtag cable 'Digilent Zed 210248B02087' is selected.
+00:56:49 INFO  : 'jtag frequency' command is executed.
+00:56:49 INFO  : Context for 'APU' is selected.
+00:56:49 INFO  : System reset is completed.
+00:56:52 INFO  : 'after 3000' command is executed.
+00:56:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}' command is executed.
+00:56:55 INFO  : Device configured successfully with "D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit"
+00:56:55 INFO  : Context for 'APU' is selected.
+00:56:55 INFO  : Hardware design and registers information is loaded from 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa'.
+00:56:55 INFO  : 'configparams force-mem-access 1' command is executed.
+00:56:55 INFO  : Context for 'APU' is selected.
+00:56:55 INFO  : Sourcing of 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl' is done.
+00:56:55 INFO  : 'ps7_init' command is executed.
+00:56:55 INFO  : 'ps7_post_config' command is executed.
+00:56:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:56:56 INFO  : The application 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:56:56 INFO  : 'configparams force-mem-access 0' command is executed.
+00:56:56 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}
+fpga -file D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:56:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:56:56 INFO  : 'con' command is executed.
+00:56:56 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+00:56:56 INFO  : Disconnected from the channel tcfchan#6.
+00:57:23 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+00:57:44 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+00:58:36 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+00:58:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:58:43 INFO  : Jtag cable 'Digilent Zed 210248B02087' is selected.
+00:58:43 INFO  : 'jtag frequency' command is executed.
+00:58:43 INFO  : Context for 'APU' is selected.
+00:58:43 INFO  : System reset is completed.
+00:58:46 INFO  : 'after 3000' command is executed.
+00:58:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}' command is executed.
+00:58:49 INFO  : Device configured successfully with "D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit"
+00:58:49 INFO  : Context for 'APU' is selected.
+00:58:49 INFO  : Hardware design and registers information is loaded from 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa'.
+00:58:49 INFO  : 'configparams force-mem-access 1' command is executed.
+00:58:49 INFO  : Context for 'APU' is selected.
+00:58:49 INFO  : Sourcing of 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl' is done.
+00:58:49 INFO  : 'ps7_init' command is executed.
+00:58:49 INFO  : 'ps7_post_config' command is executed.
+00:58:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:58:49 INFO  : The application 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:58:49 INFO  : 'configparams force-mem-access 0' command is executed.
+00:58:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}
+fpga -file D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+00:58:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:58:49 INFO  : 'con' command is executed.
+00:58:49 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+00:58:49 INFO  : Disconnected from the channel tcfchan#7.
+01:00:22 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+01:00:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:00:30 INFO  : Jtag cable 'Digilent Zed 210248B02087' is selected.
+01:00:30 INFO  : 'jtag frequency' command is executed.
+01:00:30 INFO  : Context for 'APU' is selected.
+01:00:30 INFO  : System reset is completed.
+01:00:33 INFO  : 'after 3000' command is executed.
+01:00:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}' command is executed.
+01:00:35 INFO  : Device configured successfully with "D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit"
+01:00:35 INFO  : Context for 'APU' is selected.
+01:00:35 INFO  : Hardware design and registers information is loaded from 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa'.
+01:00:35 INFO  : 'configparams force-mem-access 1' command is executed.
+01:00:35 INFO  : Context for 'APU' is selected.
+01:00:35 INFO  : Sourcing of 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl' is done.
+01:00:35 INFO  : 'ps7_init' command is executed.
+01:00:35 INFO  : 'ps7_post_config' command is executed.
+01:00:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:00:36 INFO  : The application 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:00:36 INFO  : 'configparams force-mem-access 0' command is executed.
+01:00:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}
+fpga -file D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:00:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:00:36 INFO  : 'con' command is executed.
+01:00:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+01:00:36 INFO  : Disconnected from the channel tcfchan#8.
+01:01:55 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+01:02:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:02:01 INFO  : Jtag cable 'Digilent Zed 210248B02087' is selected.
+01:02:01 INFO  : 'jtag frequency' command is executed.
+01:02:01 INFO  : Context for 'APU' is selected.
+01:02:01 INFO  : System reset is completed.
+01:02:04 INFO  : 'after 3000' command is executed.
+01:02:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}' command is executed.
+01:02:07 INFO  : Device configured successfully with "D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit"
+01:02:07 INFO  : Context for 'APU' is selected.
+01:02:07 INFO  : Hardware design and registers information is loaded from 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa'.
+01:02:07 INFO  : 'configparams force-mem-access 1' command is executed.
+01:02:07 INFO  : Context for 'APU' is selected.
+01:02:07 INFO  : Sourcing of 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl' is done.
+01:02:07 INFO  : 'ps7_init' command is executed.
+01:02:07 INFO  : 'ps7_post_config' command is executed.
+01:02:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:02:07 INFO  : The application 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:02:07 INFO  : 'configparams force-mem-access 0' command is executed.
+01:02:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}
+fpga -file D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:02:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:02:07 INFO  : 'con' command is executed.
+01:02:07 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+01:02:07 INFO  : Disconnected from the channel tcfchan#9.
+01:03:08 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+01:03:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:03:14 INFO  : Jtag cable 'Digilent Zed 210248B02087' is selected.
+01:03:14 INFO  : 'jtag frequency' command is executed.
+01:03:14 INFO  : Context for 'APU' is selected.
+01:03:14 INFO  : System reset is completed.
+01:03:17 INFO  : 'after 3000' command is executed.
+01:03:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}' command is executed.
+01:03:20 INFO  : Device configured successfully with "D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit"
+01:03:20 INFO  : Context for 'APU' is selected.
+01:03:20 INFO  : Hardware design and registers information is loaded from 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa'.
+01:03:20 INFO  : 'configparams force-mem-access 1' command is executed.
+01:03:20 INFO  : Context for 'APU' is selected.
+01:03:20 INFO  : Sourcing of 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl' is done.
+01:03:20 INFO  : 'ps7_init' command is executed.
+01:03:20 INFO  : 'ps7_post_config' command is executed.
+01:03:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:03:20 INFO  : The application 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:03:20 INFO  : 'configparams force-mem-access 0' command is executed.
+01:03:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}
+fpga -file D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:03:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:03:21 INFO  : 'con' command is executed.
+01:03:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+01:03:21 INFO  : Disconnected from the channel tcfchan#10.
+01:04:01 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+01:04:10 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+01:04:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:04:24 INFO  : Jtag cable 'Digilent Zed 210248B02087' is selected.
+01:04:24 INFO  : 'jtag frequency' command is executed.
+01:04:24 INFO  : Context for 'APU' is selected.
+01:04:24 INFO  : System reset is completed.
+01:04:27 INFO  : 'after 3000' command is executed.
+01:04:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}' command is executed.
+01:04:30 INFO  : Device configured successfully with "D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit"
+01:04:30 INFO  : Context for 'APU' is selected.
+01:04:30 INFO  : Hardware design and registers information is loaded from 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa'.
+01:04:30 INFO  : 'configparams force-mem-access 1' command is executed.
+01:04:30 INFO  : Context for 'APU' is selected.
+01:04:30 INFO  : Sourcing of 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl' is done.
+01:04:30 INFO  : 'ps7_init' command is executed.
+01:04:30 INFO  : 'ps7_post_config' command is executed.
+01:04:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:04:30 INFO  : The application 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:04:30 INFO  : 'configparams force-mem-access 0' command is executed.
+01:04:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}
+fpga -file D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:04:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:04:30 INFO  : 'con' command is executed.
+01:04:30 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+01:04:30 INFO  : Disconnected from the channel tcfchan#11.
+01:05:10 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+01:05:45 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+01:05:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:05:54 INFO  : Jtag cable 'Digilent Zed 210248B02087' is selected.
+01:05:54 INFO  : 'jtag frequency' command is executed.
+01:05:54 INFO  : Context for 'APU' is selected.
+01:05:54 INFO  : System reset is completed.
+01:05:57 INFO  : 'after 3000' command is executed.
+01:05:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}' command is executed.
+01:06:00 INFO  : Device configured successfully with "D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit"
+01:06:00 INFO  : Context for 'APU' is selected.
+01:06:00 INFO  : Hardware design and registers information is loaded from 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa'.
+01:06:00 INFO  : 'configparams force-mem-access 1' command is executed.
+01:06:00 INFO  : Context for 'APU' is selected.
+01:06:00 INFO  : Sourcing of 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl' is done.
+01:06:00 INFO  : 'ps7_init' command is executed.
+01:06:00 INFO  : 'ps7_post_config' command is executed.
+01:06:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:06:00 INFO  : The application 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:06:00 INFO  : 'configparams force-mem-access 0' command is executed.
+01:06:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}
+fpga -file D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:06:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:06:00 INFO  : 'con' command is executed.
+01:06:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+01:06:00 INFO  : Disconnected from the channel tcfchan#12.
+01:12:05 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+01:12:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:12:13 INFO  : Jtag cable 'Digilent Zed 210248B02087' is selected.
+01:12:13 INFO  : 'jtag frequency' command is executed.
+01:12:13 INFO  : Context for 'APU' is selected.
+01:12:13 INFO  : System reset is completed.
+01:12:16 INFO  : 'after 3000' command is executed.
+01:12:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}' command is executed.
+01:12:19 INFO  : Device configured successfully with "D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit"
+01:12:19 INFO  : Context for 'APU' is selected.
+01:12:19 INFO  : Hardware design and registers information is loaded from 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa'.
+01:12:19 INFO  : 'configparams force-mem-access 1' command is executed.
+01:12:19 INFO  : Context for 'APU' is selected.
+01:12:19 INFO  : Sourcing of 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl' is done.
+01:12:19 INFO  : 'ps7_init' command is executed.
+01:12:19 INFO  : 'ps7_post_config' command is executed.
+01:12:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:12:19 INFO  : The application 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:12:19 INFO  : 'configparams force-mem-access 0' command is executed.
+01:12:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}
+fpga -file D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:12:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:12:19 INFO  : 'con' command is executed.
+01:12:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+01:12:19 INFO  : Disconnected from the channel tcfchan#13.
+01:15:27 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+01:15:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:15:33 INFO  : Jtag cable 'Digilent Zed 210248B02087' is selected.
+01:15:33 INFO  : 'jtag frequency' command is executed.
+01:15:33 INFO  : Context for 'APU' is selected.
+01:15:33 INFO  : System reset is completed.
+01:15:36 INFO  : 'after 3000' command is executed.
+01:15:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}' command is executed.
+01:15:38 INFO  : Device configured successfully with "D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit"
+01:15:39 INFO  : Context for 'APU' is selected.
+01:15:39 INFO  : Hardware design and registers information is loaded from 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa'.
+01:15:39 INFO  : 'configparams force-mem-access 1' command is executed.
+01:15:39 INFO  : Context for 'APU' is selected.
+01:15:39 INFO  : Sourcing of 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl' is done.
+01:15:39 INFO  : 'ps7_init' command is executed.
+01:15:39 INFO  : 'ps7_post_config' command is executed.
+01:15:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:15:39 INFO  : The application 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:15:39 INFO  : 'configparams force-mem-access 0' command is executed.
+01:15:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}
+fpga -file D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:15:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:15:39 INFO  : 'con' command is executed.
+01:15:39 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+01:15:39 INFO  : Disconnected from the channel tcfchan#14.
+01:16:16 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+01:18:01 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+01:18:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:18:09 INFO  : Jtag cable 'Digilent Zed 210248B02087' is selected.
+01:18:09 INFO  : 'jtag frequency' command is executed.
+01:18:09 INFO  : Context for 'APU' is selected.
+01:18:09 INFO  : System reset is completed.
+01:18:12 INFO  : 'after 3000' command is executed.
+01:18:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}' command is executed.
+01:18:15 INFO  : Device configured successfully with "D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit"
+01:18:15 INFO  : Context for 'APU' is selected.
+01:18:15 INFO  : Hardware design and registers information is loaded from 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa'.
+01:18:15 INFO  : 'configparams force-mem-access 1' command is executed.
+01:18:15 INFO  : Context for 'APU' is selected.
+01:18:15 INFO  : Sourcing of 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl' is done.
+01:18:15 INFO  : 'ps7_init' command is executed.
+01:18:15 INFO  : 'ps7_post_config' command is executed.
+01:18:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:18:15 INFO  : The application 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:18:15 INFO  : 'configparams force-mem-access 0' command is executed.
+01:18:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}
+fpga -file D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:18:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:18:15 INFO  : 'con' command is executed.
+01:18:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+01:18:15 INFO  : Disconnected from the channel tcfchan#15.
+01:19:54 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+01:20:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:20:01 INFO  : Jtag cable 'Digilent Zed 210248B02087' is selected.
+01:20:01 INFO  : 'jtag frequency' command is executed.
+01:20:01 INFO  : Context for 'APU' is selected.
+01:20:01 INFO  : System reset is completed.
+01:20:04 INFO  : 'after 3000' command is executed.
+01:20:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}' command is executed.
+01:20:07 INFO  : Device configured successfully with "D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit"
+01:20:07 INFO  : Context for 'APU' is selected.
+01:20:07 INFO  : Hardware design and registers information is loaded from 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa'.
+01:20:07 INFO  : 'configparams force-mem-access 1' command is executed.
+01:20:07 INFO  : Context for 'APU' is selected.
+01:20:07 INFO  : Sourcing of 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl' is done.
+01:20:07 INFO  : 'ps7_init' command is executed.
+01:20:07 INFO  : 'ps7_post_config' command is executed.
+01:20:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:20:07 INFO  : The application 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:20:07 INFO  : 'configparams force-mem-access 0' command is executed.
+01:20:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}
+fpga -file D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:20:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:20:07 INFO  : 'con' command is executed.
+01:20:07 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+01:20:07 INFO  : Disconnected from the channel tcfchan#16.
+01:20:58 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+01:21:40 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+01:21:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:21:44 INFO  : Jtag cable 'Digilent Zed 210248B02087' is selected.
+01:21:44 INFO  : 'jtag frequency' command is executed.
+01:21:44 INFO  : Context for 'APU' is selected.
+01:21:45 INFO  : System reset is completed.
+01:21:48 INFO  : 'after 3000' command is executed.
+01:21:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}' command is executed.
+01:21:50 INFO  : Device configured successfully with "D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit"
+01:21:50 INFO  : Context for 'APU' is selected.
+01:21:50 INFO  : Hardware design and registers information is loaded from 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa'.
+01:21:50 INFO  : 'configparams force-mem-access 1' command is executed.
+01:21:50 INFO  : Context for 'APU' is selected.
+01:21:50 INFO  : Sourcing of 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl' is done.
+01:21:50 INFO  : 'ps7_init' command is executed.
+01:21:50 INFO  : 'ps7_post_config' command is executed.
+01:21:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:21:51 INFO  : The application 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:21:51 INFO  : 'configparams force-mem-access 0' command is executed.
+01:21:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}
+fpga -file D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:21:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:21:51 INFO  : 'con' command is executed.
+01:21:51 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+01:21:51 INFO  : Disconnected from the channel tcfchan#17.
+01:22:13 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+01:22:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:22:18 INFO  : Jtag cable 'Digilent Zed 210248B02087' is selected.
+01:22:18 INFO  : 'jtag frequency' command is executed.
+01:22:18 INFO  : Context for 'APU' is selected.
+01:22:18 INFO  : System reset is completed.
+01:22:21 INFO  : 'after 3000' command is executed.
+01:22:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}' command is executed.
+01:22:24 INFO  : Device configured successfully with "D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit"
+01:22:24 INFO  : Context for 'APU' is selected.
+01:22:24 INFO  : Hardware design and registers information is loaded from 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa'.
+01:22:24 INFO  : 'configparams force-mem-access 1' command is executed.
+01:22:24 INFO  : Context for 'APU' is selected.
+01:22:24 INFO  : Sourcing of 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl' is done.
+01:22:24 INFO  : 'ps7_init' command is executed.
+01:22:24 INFO  : 'ps7_post_config' command is executed.
+01:22:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:22:24 INFO  : The application 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:22:24 INFO  : 'configparams force-mem-access 0' command is executed.
+01:22:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}
+fpga -file D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:22:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:22:25 INFO  : 'con' command is executed.
+01:22:25 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+01:22:25 INFO  : Disconnected from the channel tcfchan#18.
+01:23:46 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+01:24:31 INFO  : Result from executing command 'getProjects': System_wrapper
+01:24:31 INFO  : Result from executing command 'getPlatforms': System_wrapper|D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/System_wrapper.xpfm
+01:24:32 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+01:24:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:24:52 INFO  : Jtag cable 'Digilent Zed 210248B02087' is selected.
+01:24:52 INFO  : 'jtag frequency' command is executed.
+01:24:52 INFO  : Context for 'APU' is selected.
+01:24:53 INFO  : System reset is completed.
+01:24:56 INFO  : 'after 3000' command is executed.
+01:24:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}' command is executed.
+01:24:58 INFO  : Device configured successfully with "D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit"
+01:24:58 INFO  : Context for 'APU' is selected.
+01:24:58 INFO  : Hardware design and registers information is loaded from 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa'.
+01:24:58 INFO  : 'configparams force-mem-access 1' command is executed.
+01:24:58 INFO  : Context for 'APU' is selected.
+01:24:58 INFO  : Sourcing of 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl' is done.
+01:24:59 INFO  : 'ps7_init' command is executed.
+01:24:59 INFO  : 'ps7_post_config' command is executed.
+01:24:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:24:59 INFO  : The application 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:24:59 INFO  : 'configparams force-mem-access 0' command is executed.
+01:24:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}
+fpga -file D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:24:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:24:59 INFO  : 'con' command is executed.
+01:24:59 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+01:24:59 INFO  : Disconnected from the channel tcfchan#21.
+01:28:50 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+01:28:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:28:58 INFO  : Jtag cable 'Digilent Zed 210248B02087' is selected.
+01:28:58 INFO  : 'jtag frequency' command is executed.
+01:28:58 INFO  : Context for 'APU' is selected.
+01:28:58 INFO  : System reset is completed.
+01:29:01 INFO  : 'after 3000' command is executed.
+01:29:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}' command is executed.
+01:29:03 INFO  : Device configured successfully with "D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit"
+01:29:03 INFO  : Context for 'APU' is selected.
+01:29:03 INFO  : Hardware design and registers information is loaded from 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa'.
+01:29:03 INFO  : 'configparams force-mem-access 1' command is executed.
+01:29:03 INFO  : Context for 'APU' is selected.
+01:29:03 INFO  : Sourcing of 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl' is done.
+01:29:03 INFO  : 'ps7_init' command is executed.
+01:29:04 INFO  : 'ps7_post_config' command is executed.
+01:29:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:29:04 INFO  : The application 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:29:04 INFO  : 'configparams force-mem-access 0' command is executed.
+01:29:04 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}
+fpga -file D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:29:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:29:04 INFO  : 'con' command is executed.
+01:29:04 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+01:29:04 INFO  : Disconnected from the channel tcfchan#22.
+01:29:19 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+01:29:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:29:26 INFO  : Jtag cable 'Digilent Zed 210248B02087' is selected.
+01:29:26 INFO  : 'jtag frequency' command is executed.
+01:29:26 INFO  : Context for 'APU' is selected.
+01:29:26 INFO  : System reset is completed.
+01:29:29 INFO  : 'after 3000' command is executed.
+01:29:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}' command is executed.
+01:29:31 INFO  : Device configured successfully with "D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit"
+01:29:31 INFO  : Context for 'APU' is selected.
+01:29:31 INFO  : Hardware design and registers information is loaded from 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa'.
+01:29:31 INFO  : 'configparams force-mem-access 1' command is executed.
+01:29:31 INFO  : Context for 'APU' is selected.
+01:29:31 INFO  : Sourcing of 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl' is done.
+01:29:32 INFO  : 'ps7_init' command is executed.
+01:29:32 INFO  : 'ps7_post_config' command is executed.
+01:29:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:29:32 INFO  : The application 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:29:32 INFO  : 'configparams force-mem-access 0' command is executed.
+01:29:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}
+fpga -file D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:29:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:29:32 INFO  : 'con' command is executed.
+01:29:32 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+01:29:32 INFO  : Disconnected from the channel tcfchan#23.
+01:29:49 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+01:29:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:29:54 INFO  : Jtag cable 'Digilent Zed 210248B02087' is selected.
+01:29:54 INFO  : 'jtag frequency' command is executed.
+01:29:54 INFO  : Context for 'APU' is selected.
+01:29:54 INFO  : System reset is completed.
+01:29:57 INFO  : 'after 3000' command is executed.
+01:29:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}' command is executed.
+01:30:00 INFO  : Device configured successfully with "D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit"
+01:30:00 INFO  : Context for 'APU' is selected.
+01:30:00 INFO  : Hardware design and registers information is loaded from 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa'.
+01:30:00 INFO  : 'configparams force-mem-access 1' command is executed.
+01:30:00 INFO  : Context for 'APU' is selected.
+01:30:00 INFO  : Sourcing of 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl' is done.
+01:30:00 INFO  : 'ps7_init' command is executed.
+01:30:00 INFO  : 'ps7_post_config' command is executed.
+01:30:00 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:30:01 INFO  : The application 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:30:01 INFO  : 'configparams force-mem-access 0' command is executed.
+01:30:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}
+fpga -file D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:30:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:30:01 INFO  : 'con' command is executed.
+01:30:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+01:30:01 INFO  : Disconnected from the channel tcfchan#24.
+01:33:06 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+01:33:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:33:14 INFO  : Jtag cable 'Digilent Zed 210248B02087' is selected.
+01:33:14 INFO  : 'jtag frequency' command is executed.
+01:33:14 INFO  : Context for 'APU' is selected.
+01:33:14 INFO  : System reset is completed.
+01:33:17 INFO  : 'after 3000' command is executed.
+01:33:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}' command is executed.
+01:33:19 INFO  : Device configured successfully with "D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit"
+01:33:19 INFO  : Context for 'APU' is selected.
+01:33:19 INFO  : Hardware design and registers information is loaded from 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa'.
+01:33:19 INFO  : 'configparams force-mem-access 1' command is executed.
+01:33:20 INFO  : Context for 'APU' is selected.
+01:33:20 INFO  : Sourcing of 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl' is done.
+01:33:20 INFO  : 'ps7_init' command is executed.
+01:33:20 INFO  : 'ps7_post_config' command is executed.
+01:33:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:33:20 INFO  : The application 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:33:20 INFO  : 'configparams force-mem-access 0' command is executed.
+01:33:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}
+fpga -file D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:33:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:33:20 INFO  : 'con' command is executed.
+01:33:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+01:33:20 INFO  : Disconnected from the channel tcfchan#25.
+01:33:32 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+01:33:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:33:39 INFO  : Jtag cable 'Digilent Zed 210248B02087' is selected.
+01:33:39 INFO  : 'jtag frequency' command is executed.
+01:33:39 INFO  : Context for 'APU' is selected.
+01:33:39 INFO  : System reset is completed.
+01:33:42 INFO  : 'after 3000' command is executed.
+01:33:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}' command is executed.
+01:33:44 INFO  : Device configured successfully with "D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit"
+01:33:44 INFO  : Context for 'APU' is selected.
+01:33:44 INFO  : Hardware design and registers information is loaded from 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa'.
+01:33:44 INFO  : 'configparams force-mem-access 1' command is executed.
+01:33:44 INFO  : Context for 'APU' is selected.
+01:33:44 INFO  : Sourcing of 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl' is done.
+01:33:45 INFO  : 'ps7_init' command is executed.
+01:33:45 INFO  : 'ps7_post_config' command is executed.
+01:33:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:33:45 INFO  : The application 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:33:45 INFO  : 'configparams force-mem-access 0' command is executed.
+01:33:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}
+fpga -file D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:33:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:33:45 INFO  : 'con' command is executed.
+01:33:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+01:33:45 INFO  : Disconnected from the channel tcfchan#26.
+01:34:21 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+01:34:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:34:29 INFO  : Jtag cable 'Digilent Zed 210248B02087' is selected.
+01:34:29 INFO  : 'jtag frequency' command is executed.
+01:34:29 INFO  : Context for 'APU' is selected.
+01:34:29 INFO  : System reset is completed.
+01:34:32 INFO  : 'after 3000' command is executed.
+01:34:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}' command is executed.
+01:34:34 INFO  : Device configured successfully with "D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit"
+01:34:34 INFO  : Context for 'APU' is selected.
+01:34:34 INFO  : Hardware design and registers information is loaded from 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa'.
+01:34:34 INFO  : 'configparams force-mem-access 1' command is executed.
+01:34:34 INFO  : Context for 'APU' is selected.
+01:34:34 INFO  : Sourcing of 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl' is done.
+01:34:35 INFO  : 'ps7_init' command is executed.
+01:34:35 INFO  : 'ps7_post_config' command is executed.
+01:34:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:34:35 INFO  : The application 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:34:35 INFO  : 'configparams force-mem-access 0' command is executed.
+01:34:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}
+fpga -file D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:34:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:34:35 INFO  : 'con' command is executed.
+01:34:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+01:34:35 INFO  : Disconnected from the channel tcfchan#27.
+01:34:44 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+01:34:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:34:49 INFO  : Jtag cable 'Digilent Zed 210248B02087' is selected.
+01:34:49 INFO  : 'jtag frequency' command is executed.
+01:34:49 INFO  : Context for 'APU' is selected.
+01:34:49 INFO  : System reset is completed.
+01:34:52 INFO  : 'after 3000' command is executed.
+01:34:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}' command is executed.
+01:34:55 INFO  : Device configured successfully with "D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit"
+01:34:55 INFO  : Context for 'APU' is selected.
+01:34:55 INFO  : Hardware design and registers information is loaded from 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa'.
+01:34:55 INFO  : 'configparams force-mem-access 1' command is executed.
+01:34:55 INFO  : Context for 'APU' is selected.
+01:34:55 INFO  : Sourcing of 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl' is done.
+01:34:55 INFO  : 'ps7_init' command is executed.
+01:34:55 INFO  : 'ps7_post_config' command is executed.
+01:34:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:34:55 INFO  : The application 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:34:55 INFO  : 'configparams force-mem-access 0' command is executed.
+01:34:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}
+fpga -file D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:34:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:34:55 INFO  : 'con' command is executed.
+01:34:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+01:34:55 INFO  : Disconnected from the channel tcfchan#28.
+01:35:22 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+01:35:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:35:28 INFO  : Jtag cable 'Digilent Zed 210248B02087' is selected.
+01:35:28 INFO  : 'jtag frequency' command is executed.
+01:35:28 INFO  : Context for 'APU' is selected.
+01:35:28 INFO  : System reset is completed.
+01:35:31 INFO  : 'after 3000' command is executed.
+01:35:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}' command is executed.
+01:35:34 INFO  : Device configured successfully with "D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit"
+01:35:34 INFO  : Context for 'APU' is selected.
+01:35:34 INFO  : Hardware design and registers information is loaded from 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa'.
+01:35:34 INFO  : 'configparams force-mem-access 1' command is executed.
+01:35:34 INFO  : Context for 'APU' is selected.
+01:35:34 INFO  : Sourcing of 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl' is done.
+01:35:34 INFO  : 'ps7_init' command is executed.
+01:35:34 INFO  : 'ps7_post_config' command is executed.
+01:35:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:35:34 INFO  : The application 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:35:34 INFO  : 'configparams force-mem-access 0' command is executed.
+01:35:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}
+fpga -file D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:35:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:35:34 INFO  : 'con' command is executed.
+01:35:34 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+01:35:35 INFO  : Disconnected from the channel tcfchan#29.
+01:42:34 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+01:42:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+01:42:46 INFO  : Jtag cable 'Digilent Zed 210248B02087' is selected.
+01:42:46 INFO  : 'jtag frequency' command is executed.
+01:42:46 INFO  : Context for 'APU' is selected.
+01:42:46 INFO  : System reset is completed.
+01:42:49 INFO  : 'after 3000' command is executed.
+01:42:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}' command is executed.
+01:42:52 INFO  : Device configured successfully with "D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit"
+01:42:52 INFO  : Context for 'APU' is selected.
+01:42:52 INFO  : Hardware design and registers information is loaded from 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa'.
+01:42:52 INFO  : 'configparams force-mem-access 1' command is executed.
+01:42:52 INFO  : Context for 'APU' is selected.
+01:42:52 INFO  : Sourcing of 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl' is done.
+01:42:52 INFO  : 'ps7_init' command is executed.
+01:42:52 INFO  : 'ps7_post_config' command is executed.
+01:42:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:42:52 INFO  : The application 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf' is downloaded to processor 'ps7_cortexa9_0'.
+01:42:53 INFO  : 'configparams force-mem-access 0' command is executed.
+01:42:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}
+fpga -file D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+01:42:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+01:42:53 INFO  : 'con' command is executed.
+01:42:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+01:42:53 INFO  : Disconnected from the channel tcfchan#30.
+02:43:36 INFO  : Checking for BSP changes to sync application flags for project 'UART_GPIO_Zedboard'...
+02:43:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+02:43:55 INFO  : Jtag cable 'Digilent Zed 210248B02087' is selected.
+02:43:55 INFO  : 'jtag frequency' command is executed.
+02:43:55 INFO  : Context for 'APU' is selected.
+02:43:55 INFO  : System reset is completed.
+02:43:58 INFO  : 'after 3000' command is executed.
+02:43:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}' command is executed.
+02:44:00 INFO  : Device configured successfully with "D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit"
+02:44:01 INFO  : Context for 'APU' is selected.
+02:44:01 INFO  : Hardware design and registers information is loaded from 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa'.
+02:44:01 INFO  : 'configparams force-mem-access 1' command is executed.
+02:44:01 INFO  : Context for 'APU' is selected.
+02:44:01 INFO  : Sourcing of 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl' is done.
+02:44:01 INFO  : 'ps7_init' command is executed.
+02:44:01 INFO  : 'ps7_post_config' command is executed.
+02:44:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:44:01 INFO  : The application 'D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf' is downloaded to processor 'ps7_cortexa9_0'.
+02:44:01 INFO  : 'configparams force-mem-access 0' command is executed.
+02:44:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248B02087" && level==0 && jtag_device_ctx=="jsn-Zed-210248B02087-23727093-0"}
+fpga -file D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/bitstream/System_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/System_wrapper/export/System_wrapper/hw/System_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Projects/SOC_Projects/UART_GPIO_Zedboard/VitisWorkspace/UART_GPIO_Zedboard/Debug/UART_GPIO_Zedboard.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+02:44:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+02:44:01 INFO  : 'con' command is executed.
+02:44:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+02:44:01 INFO  : Disconnected from the channel tcfchan#31.
