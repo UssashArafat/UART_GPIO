@@ -1,5 +1,5 @@
 # UART_GPIO
-### A software application on ARM processing system to control hardware that is implemented in programmable logic and comminication using UART
+### A software application on ARM processing system to control hardware that is implemented in programmable logic and communication using UART
 -------------------------------------------------------------------------------------------------------------------
 
 ### Tools:  	
