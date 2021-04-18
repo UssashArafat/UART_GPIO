@@ -15,7 +15,7 @@
 * UART for serial communication
 * DDR3 controller for external DDR3 SDRAM memory
 * AXI Interconnect block
-* Two instances pf GPIO peripheral
+* Two instances of GPIO peripheral
 
 ![](ResourceFiles/R3.PNG)
 
